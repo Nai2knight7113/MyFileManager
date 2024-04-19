@@ -6,15 +6,27 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Controller {
+public class MyController {
     // フィールド群
     public Pane TitlePane;
     public Pane MainPane;
     public Button ExitButton;
     public Button MinimizeButton;
+    @FXML
+    public VBox MainVBox;  // MainのScrollPane直下Box
+    public VBox ListVBox;  // ListのScrollPane直下Box
 
+    // MainVBox
+    public VBox getMainVBox() {
+        return MainVBox;
+    }
+
+
+
+    /* イベント処理 */
 
     // Xボタンの処理
     @FXML
