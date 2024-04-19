@@ -5,23 +5,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1"
-      xmlns="http://javafx.com/javafx/21" fx:controller="com.example.myfilemanager.Controller">
-   <Pane fx:id="TitlePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-         onMouseDragged="#windowMoveDragged" onMousePressed="#windowMovePressed" prefHeight="38.0" prefWidth="1000.0"
-         style="-fx-background-color: #545454;">
-      <Button fx:id="ExitButton" layoutX="948.0" mnemonicParsing="false" onAction="#onExitButtonClick"
-              prefHeight="25.0" prefWidth="52.0" styleClass="titleButton" stylesheets="@style.css" text="X"
-              textAlignment="CENTER" textFill="WHITE"/>
-      <Button layoutX="896.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0"
-              style="-fx-background-color: #545454;" text="□" textFill="WHITE">
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myfilemanager.Controller">
+   <Pane fx:id="TitlePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#windowMoveDragged" onMousePressed="#windowMovePressed" prefHeight="38.0" prefWidth="1000.0" style="-fx-background-color: #545454;">
+      <Button fx:id="ExitButton" layoutX="948.0" mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="25.0" prefWidth="52.0" styleClass="titleButton" stylesheets="@style.css" text="X" textAlignment="CENTER" textFill="WHITE" />
+      <Button layoutX="896.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #545454;" text="□" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="12.0"/>
+            <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="844.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0"
-              style="-fx-background-color: #545454;" text="ー" textFill="WHITE"/>
+      <Button fx:id="MinimizeButton" layoutX="844.0" mnemonicParsing="false" onAction="#windowMinimize" prefHeight="25.0" prefWidth="52.0" styleClass="titleButton" stylesheets="@style.css" text="ー" textFill="WHITE" />
    </Pane>
-   <Pane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-         prefHeight="563.0" prefWidth="1000.0" style="-fx-background-color: red;"/>
+   <Pane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1000.0" style="-fx-background-color: red;" />
 </VBox>

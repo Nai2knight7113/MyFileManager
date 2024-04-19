@@ -13,6 +13,7 @@ public class Controller {
     public Pane TitlePane;
     public Pane MainPane;
     public Button ExitButton;
+    public Button MinimizeButton;
 
 
     // Xボタンの処理
@@ -30,8 +31,6 @@ public class Controller {
         Node source = (Node) e.getSource();
         windowXOffset = e.getScreenX() - source.getScene().getWindow().getX();
         windowYOffset = e.getScreenY() - source.getScene().getWindow().getY();
-
-        System.out.println(windowXOffset + ", " + windowYOffset);
     }
 
     @FXML
@@ -45,4 +44,12 @@ public class Controller {
         stage.setY(y);
     }
 
+    // ウィンドウの最小化
+    @FXML
+    protected void windowMinimize(ActionEvent e) {
+        Node source = (Node) e.getSource();
+        Stage stage = (Stage) source.getScene().getWindow();
+
+        stage.setIconified(true);
+    }
 }
