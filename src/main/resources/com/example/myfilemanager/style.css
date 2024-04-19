@@ -1,0 +1,8 @@
+/* ボタンがホバーされたときのスタイル */
+.titleButton {
+    -fx-background-color: #545454;
+}
+
+.titleButton:hover {
+    -fx-background-color: red;
+}
