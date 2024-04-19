@@ -10,13 +10,22 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 public class Main extends Application {
+    // 現在見ているディレクトリ
+    String currentDirectory;
+
     @Override
     public void start(Stage stage) throws IOException {
         // デフォルトのタイトルバーの非表示
         stage.initStyle(StageStyle.UNDECORATED);
+
+        // デフォルトカレントディレクトリの設定
+        String userHome = System.getProperty("user.home");
+        Path downloadPath = Paths.get(userHome, "Downloads");
+        currentDirectory = downloadPath.toString();
 
         // fxmlファイル(GUI)のロード
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ui.fxml"));
@@ -27,7 +36,7 @@ public class Main extends Application {
         ListView mainView = controller.getMainView();
         //mainVBox.getChildren().add(fileList);
         try {
-            List<Path> items = FileManage.listFD("C:\\Users\\naito\\Downloads");
+            List<Path> items = FileManage.listFD(currentDirectory);
             for (Path item : items) {
                 mainView.getItems().add(item.toString());
                 System.out.println(item);
@@ -41,6 +50,10 @@ public class Main extends Application {
         Scene scene = new Scene(root, 1000, 600);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void setupScreen() {
+
     }
 
     public static void main(String[] args) {
