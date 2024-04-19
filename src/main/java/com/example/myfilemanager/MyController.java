@@ -4,9 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class MyController {
@@ -16,12 +16,12 @@ public class MyController {
     public Button ExitButton;
     public Button MinimizeButton;
     @FXML
-    public VBox MainVBox;  // MainのScrollPane直下Box
-    public VBox ListVBox;  // ListのScrollPane直下Box
+    public ListView MainView;  // MainのScrollPane直下Box
+    public ListView ListView;  // ListのScrollPane直下Box
 
     // MainVBox
-    public VBox getMainVBox() {
-        return MainVBox;
+    public ListView getMainView() {
+        return MainView;
     }
 
 

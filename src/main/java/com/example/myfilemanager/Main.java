@@ -23,21 +23,18 @@ public class Main extends Application {
         VBox root = fxmlLoader.load();
 
         // ファイルとディレクトリの取得
-        ListView<String> fileList = new ListView<>();
+        MyController controller = fxmlLoader.getController();
+        ListView mainView = controller.getMainView();
+        //mainVBox.getChildren().add(fileList);
         try {
             List<Path> items = FileManage.listFD("C:\\Users\\naito\\Downloads");
             for (Path item : items) {
-                fileList.getItems().add(item.toString());
+                mainView.getItems().add(item.toString());
                 System.out.println(item);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        MyController controller = fxmlLoader.getController();
-        VBox mainVBox = controller.getMainVBox();
-
-        mainVBox.getChildren().add(fileList);
 
         // シーンの作成と表示
 
