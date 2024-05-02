@@ -40,6 +40,8 @@ public class ListViewItemCell extends ListCell<Path> {
 
             // ファイルアイコン
             ImageView icon = new ImageView(new Image(loader.getLocation().toString()));
+            icon.setFitWidth(32);
+            icon.setFitHeight(32);
             setGraphic(icon);
         }
     }
