@@ -1,3 +1,7 @@
+.mainView {
+    -fx-control-inner-background: #aaaaaa;
+}
+
 /* ボタンがホバーされたときのスタイル */
 .titleButton {
     -fx-background-color: #545454;

@@ -9,6 +9,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.List;
+
 public class MyController {
     // フィールド群
     public Pane TitlePane;
@@ -19,7 +23,21 @@ public class MyController {
     public ListView MainView;  // MainのScrollPane直下Box
     public ListView ListView;  // ListのScrollPane直下Box
 
-    // MainVBox
+    // MainView
+    public void initialize() {
+        MainView.setCellFactory(param -> new ListViewItemCell());
+
+        try {
+            List<Path> items = FileManage.listFD(Main.currentDirectory);
+            for (Path item : items) {
+                MainView.getItems().add(item);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // MainView getter
     public ListView getMainView() {
         return MainView;
     }

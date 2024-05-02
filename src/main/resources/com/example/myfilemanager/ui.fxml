@@ -4,6 +4,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TreeView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -23,14 +24,15 @@
         <SplitPane dividerPositions="0.20240480961923848" prefHeight="563.0" prefWidth="1000.0">
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="561.0" prefWidth="159.0">
                 <ScrollPane prefHeight="561.0" prefWidth="200.0">
-                    <ListView fx:id="ListView" prefHeight="560.0" prefWidth="198.0"/>
+                    <TreeView prefHeight="559.0" prefWidth="202.0"/>
                 </ScrollPane>
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                 <ScrollPane prefHeight="561.0" prefWidth="793.0">
-                    <ListView fx:id="MainView" prefHeight="560.0" prefWidth="792.0"/>
+                    <ListView fx:id="MainView" prefHeight="560.0" prefWidth="792.0" styleClass="mainView" stylesheets="@style.css" />
                 </ScrollPane>
             </AnchorPane>
         </SplitPane>
     </Pane>
+   <TreeView prefHeight="200.0" prefWidth="200.0" />
 </VBox>

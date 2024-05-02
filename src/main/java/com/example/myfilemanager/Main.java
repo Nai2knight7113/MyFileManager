@@ -11,11 +11,10 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
 
 public class Main extends Application {
     // 現在見ているディレクトリ
-    String currentDirectory;
+    static String currentDirectory = "";
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -34,16 +33,15 @@ public class Main extends Application {
         // ファイルとディレクトリの取得
         MyController controller = fxmlLoader.getController();
         ListView mainView = controller.getMainView();
-        //mainVBox.getChildren().add(fileList);
+        /*
         try {
             List<Path> items = FileManage.listFD(currentDirectory);
             for (Path item : items) {
-                mainView.getItems().add(item.toString());
-                System.out.println(item);
+                mainView.getItems().add(item.getFileName().toString());
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
 
         // シーンの作成と表示
 
