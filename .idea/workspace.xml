@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e0e6e08-fcf5-41bd-ab70-e4ab90fbd03f" name="Changes" comment="- VboxをListViewに変更">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/myfilemanager/ListViewItemCell.java" afterDir="false" />
+    <list default="true" id="9e0e6e08-fcf5-41bd-ab70-e4ab90fbd03f" name="Changes" comment="- ファイルテキストだけでなくファイルアイコンも表示するように変更">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myfilemanager/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myfilemanager/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myfilemanager/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myfilemanager/MyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myfilemanager/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myfilemanager/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/myfilemanager/ui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/myfilemanager/ui.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713551606115</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- ファイルテキストだけでなくファイルアイコンも表示するように変更">
+      <created>1714618028715</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714618028715</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,7 +148,8 @@
     <MESSAGE value="- 最小化ボタンの実装" />
     <MESSAGE value="- 特定のディレクトリの読み込みとListViewで表示" />
     <MESSAGE value="- VboxをListViewに変更" />
-    <option name="LAST_COMMIT_MESSAGE" value="- VboxをListViewに変更" />
+    <MESSAGE value="- ファイルテキストだけでなくファイルアイコンも表示するように変更" />
+    <option name="LAST_COMMIT_MESSAGE" value="- ファイルテキストだけでなくファイルアイコンも表示するように変更" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
